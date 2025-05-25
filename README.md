@@ -38,7 +38,7 @@ playwright install
 
 ## ⚙️ Cara Instal Otomatis (VPS)
 
-Copy dan paste ini ke VPS:
+Copy dan paste ini ke VPS ( PASTIKAN SUDAH PUBLIC ):
 
 ```bash
 cd /root && \
