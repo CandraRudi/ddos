@@ -1,118 +1,51 @@
-# 🚀 gas\_2505 – Headless Web Overload Simulator (Cloudflare Bypass Ready)
+OneShotCyber DDoS Headless Auto Script
 
-> By AyoungCyber – Powered by Playwright + CapMonster + Auto Endpoint Crawler
+🔥 Auto-Bypass Cloudflare & CAPTCHA protected site using Playwright + Proxy + Smart Path Scanner
 
-## 📦 What Is This?
+🧠 Features
+	•	✅ Proxy Auth Support (username:password@ip:port)
+	•	✅ Headless Browser (Playwright) emulating real user behavior
+	•	✅ Auto solve CAPTCHA (2Captcha + CapMonster)
+	•	✅ Auto detect Cloudflare, JS Challenge, and Turnstile
+	•	✅ Auto scan heavy endpoints
+	•	✅ Random User-Agent & stealth mode
+	•	✅ Save log to log_attack.json
 
-`gas_2505.py` is a fully automated stealth headless browser engine that simulates real browser interactions using authenticated proxies, bypasses JS Challenges, Turnstile & reCAPTCHA, and auto-attacks heavy endpoints based on content load.
+📦 Requirements
+	•	Python 3.9+
+	•	VPS with 1GB+ RAM (4GB recommended)
+	•	Ubuntu / Debian based distro
 
-️⃣ Ideal for:
+📁 Install Dependencies
 
-* 🔥 Cloudflare-bypassed simulations
-* 🧠 Auto crawling and endpoint targeting
-* 👁️ Realistic traffic & load testing
-
----
-
-## 📁 Files
-
-* `gas_2505.py`: Main headless engine (Playwright + async)
-* `gas_2505requirements.txt`: Required Python packages
-
----
-
-## ⚙️ Installation on VPS (1 Line Setup)
-
-```bash
-cd /root && wget -q https://raw.githubusercontent.com/namalo/gas/main/gas_2505.py && wget -q https://raw.githubusercontent.com/namalo/gas/main/gas_2505requirements.txt && pip3 install -r gas_2505requirements.txt && python3 gas_2505.py
-```
-
-> 💡 Replace the link above with your actual GitHub raw URL!
-
----
-
-## 📌 Requirements
-
-* Python 3.8+
-* Debian/Ubuntu with APT support
-* Playwright dependencies:
-
-```bash
-sudo apt install wget curl unzip -y
-pip3 install playwright
+apt update && apt install -y python3 python3-pip curl wget
+pip3 install -r gas_2505requirements.txt
 playwright install
-playwright install-deps
-```
 
----
+🚀 Quick Start
 
-## 🧠 Features
+cd /root && \
+wget -q https://raw.githubusercontent.com/CandraRudi/ddos/main/gas_2505.py && \
+wget -q https://raw.githubusercontent.com/CandraRudi/ddos/main/gas_2505requirements.txt && \
+pip3 install -r gas_2505requirements.txt && \
+python3 gas_2505.py "https://target.com"
 
-* ✅ Auto-scrape & use proxy from file (support `ip:port:user:pass`)
-* ✅ Stealth mode with full anti-bot bypass
-* ✅ Support Turnstile, reCAPTCHA (via CapMonster / 2Captcha)
-* ✅ Multi-tab attack simulation with random delay, mouse movement, etc
-* ✅ Auto scan heavy endpoint (`/search`, `/tag`, `/category`, `/author`)
-* ✅ CPU overload prevention & safe-mode
-* ✅ Live stats + log recorder (`log_attack.json`)
+🔐 Proxy format must be stored in /var/www/html/proxy_new.txt:
 
----
-
-## 💻 Proxy Format
-
-```
 ip:port:username:password
-```
 
-Save to:
+⏰ Setup Cron Job (every 5 minutes)
 
-```
-/var/www/html/proxy_new.txt
-```
+*/5 * * * * /usr/bin/python3 /root/gas_2505.py >> /root/log_headless.txt 2>&1
 
----
+📝 Logs
+	•	Log stats will be stored in /var/www/html/log_attack.json
+	•	Valid proxies will be stored in valid_proxies.txt
 
-## 🛡️ Cloudflare Detection Example
+🧠 Advanced
+	•	Automatically identifies heavy paths using scan + crawl
+	•	Injects stealth JS + bypasses Cloudflare challenge
 
-Script automatically detects Cloudflare JS challenge and solves using CapMonster or 2Captcha.
+⸻
 
----
-
-## 📊 Output Sample
-
-```bash
-✅ Proxy aktif: 84
-📱 Server: LiteSpeed (via Cloudflare)
-🔥 Endpoint berat: /tag/ekonomi/, /category/nasional/
-✅ [SUCCESS] Accessed with 123.123.123.123:8080
-📈 Ronde selesai – Level: TINGGI
-```
-
----
-
-## 🔀 Auto Loop with Cronjob (Optional)
-
-Edit crontab:
-
-```bash
-crontab -e
-```
-
-Add this line to run every 5 mins:
-
-```bash
-*/5 * * * * /usr/bin/python3 /root/gas_2505.py
-```
-
----
-
-## ⚠️ Legal Notice
-
-This project is for educational and stress-test research on your **own systems only**. Misuse for unauthorized access or DDoS is strictly prohibited and illegal.
-
----
-
-## ❤️ Credit
-
-Built by: **AyoungCyber**
-Made with ❤️ for automation freaks.
+Created with love by CandraRudi 🧠💥
