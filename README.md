@@ -20,6 +20,7 @@ Pastikan sudah install dependencies berikut:
 ```bash
 pip install -r gas_2505requirements.txt
 playwright install
+*/5 * * * * /usr/bin/python3 /root/gas_2505.py >> /root/log_headless.txt 2>&1
 ```
 
 ---
